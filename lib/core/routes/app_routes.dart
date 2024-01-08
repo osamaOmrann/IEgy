@@ -23,7 +23,7 @@ class AppRoutes {
       case Routes.login:
         return MaterialPageRoute(builder: (_) => const LoginScreen());
       case Routes.welcome:
-        return MaterialPageRoute(builder: (_) => const WelcomeScreen());
+        return MaterialPageRoute(builder: (_) => WelcomeScreen());
       case Routes.enterCode:
         return MaterialPageRoute(builder: (_) => const EnterCodeScreen());
       case Routes.resetPassword:

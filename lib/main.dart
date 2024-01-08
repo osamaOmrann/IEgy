@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iegy/core/routes/app_routes.dart';
 import 'package:iegy/core/theme/app_theme.dart';
 
@@ -12,11 +13,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      initialRoute: Routes.initialRoute,
-      onGenerateRoute: AppRoutes.generateRoute,
-      title: 'IEgy',
-      theme: getAppTheme(),
+    return ScreenUtilInit(
+      designSize: const Size(430, 932),
+      builder: (context, child) => MaterialApp(
+        initialRoute: Routes.initialRoute,
+        onGenerateRoute: AppRoutes.generateRoute,
+        title: 'IEgy',
+        theme: getAppTheme(),
+      ),
     );
   }
 }

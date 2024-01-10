@@ -1,27 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:iegy/core/routes/app_routes.dart';
 import 'package:iegy/core/utils/app_assets.dart';
 import 'package:iegy/core/utils/app_colors.dart';
+import 'package:iegy/core/utils/common_methods.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class WelcomeScreen extends StatefulWidget {
-  const WelcomeScreen({super.key});
+  const WelcomeScreen({Key? key}) : super(key: key);
 
   @override
   _WelcomeScreenState createState() => _WelcomeScreenState();
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
-  final controller = PageController(viewportFraction: 0.8, keepPage: true);
+  final controller = PageController(viewportFraction: 1, keepPage: true);
+  bool isFirstPage = true;
 
   @override
   Widget build(BuildContext context) {
-    bool first = true;
     final pages = List.generate(
-        2,
-        (index) => Image.asset(
-              index == 0 ? AppAssets.splash1 : AppAssets.splash2,
-            ));
+      2,
+      (index) => Image.asset(
+        index == 0 ? AppAssets.splash1 : AppAssets.splash2,
+      ),
+    );
 
     return Scaffold(
       body: SafeArea(
@@ -37,29 +40,35 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 itemBuilder: (_, index) {
                   return pages[index % pages.length];
                 },
-                onPageChanged: (_) => setState(() => first = !first),
+                onPageChanged: (int index) {
+                  setState(() {
+                    isFirstPage = index == 0;
+                  });
+
+                  // قم بتنفيذ الإجراء المطلوب باستخدام العنصر المعروض
+                  // في هذا المثال، سنقوم بطباعة العنصر المعروض
+                  print("Displayed Page: ${index + 1}");
+                },
               ),
             ),
-            SizedBox(
-              height: 32.h,
-            ),
+            SizedBox(height: 32.h),
             Image.asset(
               AppAssets.appLogo,
               height: 126.h,
               width: 126.w,
             ),
-            SizedBox(
-              height: 66.h,
+            SizedBox(height: 66.h),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 22.w),
+              child: Text(
+                isFirstPage
+                    ? '!!نصنع الأثاث بعيونك أنت'
+                    : '!!بيت جديد!! أثاث جديد\nاكتشف تشكيلتنا المميزة من الأثاث و جدد منزلك بلمسة سحرية',
+                style: Theme.of(context).textTheme.displayLarge,
+                textAlign: TextAlign.center,
+              ),
             ),
-            Text(
-              first
-                  ? '!!نصنع الأثاث بعيونك أنت'
-                  : '!!بيت جديد!! أثاث جديد\nاكتشف تشكيلتنا المميزة من الأثاث و جدد منزلك بلمسة سحرية.',
-              style: Theme.of(context).textTheme.displayLarge,
-            ),
-            SizedBox(
-              height: 66.h,
-            ),
+            SizedBox(height: 66.h),
             SmoothPageIndicator(
               controller: controller,
               count: pages.length,
@@ -74,18 +83,26 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           ],
         ),
       ),
-      floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Text(
-            'التالي',
-            style: Theme.of(context).textTheme.displayLarge,
-          ),
-          Icon(
-            Icons.play_arrow,
-            color: AppColors.brown,
-          )
-        ],
+      floatingActionButton: InkWell(
+        onTap: () => controller.page == pages.length - 1
+            ? navigateLast(context: context, route: Routes.login)
+            : controller.nextPage(
+                duration: Duration(milliseconds: 500),
+                curve: Curves.ease,
+              ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Text(
+              'التالي',
+              style: Theme.of(context).textTheme.displayLarge,
+            ),
+            Icon(
+              Icons.play_arrow,
+              color: AppColors.brown,
+            ),
+          ],
+        ),
       ),
     );
   }

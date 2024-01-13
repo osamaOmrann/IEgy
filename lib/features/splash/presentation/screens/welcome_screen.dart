@@ -6,6 +6,8 @@ import 'package:iegy/core/utils/app_colors.dart';
 import 'package:iegy/core/utils/common_methods.dart';
 import 'package:iegy/core/widgets/custom_image.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -45,9 +47,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   setState(() {
                     isFirstPage = index == 0;
                   });
-
-                  // قم بتنفيذ الإجراء المطلوب باستخدام العنصر المعروض
-                  // في هذا المثال، سنقوم بطباعة العنصر المعروض
                   print("Displayed Page: ${index + 1}");
                 },
               ),
@@ -59,8 +58,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               padding: EdgeInsets.symmetric(horizontal: 22.w),
               child: Text(
                 isFirstPage
-                    ? '!!نصنع الأثاث بعيونك أنت'
-                    : '!!بيت جديد!! أثاث جديد\nاكتشف تشكيلتنا المميزة من الأثاث و جدد منزلك بلمسة سحرية',
+                    ? AppLocalizations.of(context)!.we_make_furniture_with_your_eyes
+                    : '${AppLocalizations.of(context)!.new_home_new_furniture}\n ${AppLocalizations.of(context)!.discover_our_distinctive_collection_of_furniture_and_renew_your_home_with_a_magical_touch}',
                 style: Theme.of(context).textTheme.displayLarge,
                 textAlign: TextAlign.center,
               ),
@@ -91,12 +90,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Text(
-              'التالي',
+              AppLocalizations.of(context)!.next,
               style: Theme.of(context).textTheme.displayLarge,
             ),
             Icon(
-              Icons.play_arrow,
+              Icons.arrow_right_outlined,
               color: AppColors.brown,
+              size: 39.w,
             ),
           ],
         ),

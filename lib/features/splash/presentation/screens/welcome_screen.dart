@@ -4,6 +4,7 @@ import 'package:iegy/core/routes/app_routes.dart';
 import 'package:iegy/core/utils/app_assets.dart';
 import 'package:iegy/core/utils/app_colors.dart';
 import 'package:iegy/core/utils/common_methods.dart';
+import 'package:iegy/core/widgets/custom_image.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -21,7 +22,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   Widget build(BuildContext context) {
     final pages = List.generate(
       2,
-      (index) => Image.asset(
+      (index) => CustomImage(imagePath:
         index == 0 ? AppAssets.splash1 : AppAssets.splash2,
       ),
     );
@@ -52,11 +53,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               ),
             ),
             SizedBox(height: 32.h),
-            Image.asset(
-              AppAssets.appLogo,
-              height: 126.h,
-              width: 126.w,
-            ),
+            CustomImage(imagePath: AppAssets.appLogo, h: 126.h, w: 126.w,),
             SizedBox(height: 66.h),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 22.w),

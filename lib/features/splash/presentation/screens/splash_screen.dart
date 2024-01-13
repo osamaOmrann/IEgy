@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iegy/core/routes/app_routes.dart';
 import 'package:iegy/core/utils/app_assets.dart';
 import 'package:iegy/core/utils/common_methods.dart';
+import 'package:iegy/core/widgets/custom_image.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -28,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
         body: Center(
       child: SizedBox(
-          height: 200.h, width: 200.w, child: Image.asset(AppAssets.appLogo)),
+          height: 200.h, width: 200.w, child: CustomImage(imagePath: AppAssets.appLogo)),
     ));
   }
 }

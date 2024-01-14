@@ -101,6 +101,106 @@ class S {
       args: [],
     );
   }
+
+  /// `E-mail`
+  String get email {
+    return Intl.message(
+      'E-mail',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forgot password?`
+  String get forgot_password {
+    return Intl.message(
+      'Forgot password?',
+      name: 'forgot_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login with`
+  String get login_with {
+    return Intl.message(
+      'Login with',
+      name: 'login_with',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Google`
+  String get google {
+    return Intl.message(
+      'Google',
+      name: 'google',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Facebook`
+  String get facebook {
+    return Intl.message(
+      'Facebook',
+      name: 'facebook',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create new account`
+  String get create_new_acc {
+    return Intl.message(
+      'Create new account',
+      name: 'create_new_acc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password is required`
+  String get password_is_required {
+    return Intl.message(
+      'Password is required',
+      name: 'password_is_required',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter valid email`
+  String get please_enter_valid_email {
+    return Intl.message(
+      'Please enter valid email',
+      name: 'please_enter_valid_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email is required`
+  String get email_is_required {
+    return Intl.message(
+      'Email is required',
+      name: 'email_is_required',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

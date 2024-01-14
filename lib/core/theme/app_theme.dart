@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iegy/core/utils/app_colors.dart';
 import 'package:iegy/core/utils/app_text_style.dart';
 
@@ -6,7 +7,7 @@ ThemeData getAppTheme() {
   return ThemeData(
       primaryColor: AppColors.primary,
       scaffoldBackgroundColor: AppColors.primary,
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
           backgroundColor: AppColors.blue // *** As default value need to be changed ***
       ),
       textTheme: TextTheme(
@@ -23,16 +24,18 @@ ThemeData getAppTheme() {
           )
       ),
       inputDecorationTheme: InputDecorationTheme(
-          enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8)
-          ),
-          focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8)
-          ),
-          errorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8)
-          ),
-          hintStyle: boldStyle(color: AppColors.grey, fontSize: 16)
+            filled: true,
+            fillColor: AppColors.white,
+            enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide.none,
+              borderRadius: BorderRadius.circular(59),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide.none,
+              borderRadius: BorderRadius.circular(59),
+            ),
+          hintStyle: regularStyle(color: AppColors.grey, fontSize: 14.w),
+          contentPadding: const EdgeInsets.symmetric(vertical: 0)
       ),
       textButtonTheme: TextButtonThemeData(
           style: ButtonStyle(

@@ -3,5 +3,15 @@
   "next": "Next",
   "new_home_new_furniture": "New home!! New furniture!!",
   "discover_our_distinctive_collection_of_furniture_and_renew_your_home_with_a_magical_touch": "Discover our distinctive collection of furniture and renew your home with a magical touch.",
-  "login": "Login"
+  "login": "Login",
+  "email": "E-mail",
+  "password": "Password",
+  "forgot_password": "Forgot password?",
+  "login_with": "Login with",
+  "google": "Google",
+  "facebook": "Facebook",
+  "create_new_acc": "Create new account",
+  "password_is_required": "Password is required",
+  "please_enter_valid_email": "Please enter valid email",
+  "email_is_required": "Email is required"
 }

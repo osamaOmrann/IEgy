@@ -79,11 +79,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           ],
         ),
       ),
-      floatingActionButton: InkWell(
+      floatingActionButton: GestureDetector(
         onTap: () => controller.page == pages.length - 1
             ? navigateLast(context: context, route: Routes.login)
             : controller.nextPage(
-                duration: Duration(milliseconds: 500),
+                duration: const Duration(milliseconds: 500),
                 curve: Curves.ease,
               ),
         child: Row(

@@ -22,13 +22,28 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "create_new_acc":
+            MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
         "discover_our_distinctive_collection_of_furniture_and_renew_your_home_with_a_magical_touch":
             MessageLookupByLibrary.simpleMessage(
                 "اكتشف تشكيلتنا المميزة من الأثاث و جدد منزلك بلمسة سحرية."),
+        "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "email_is_required":
+            MessageLookupByLibrary.simpleMessage("يجب إدخال بريد إلكتروني"),
+        "facebook": MessageLookupByLibrary.simpleMessage("فيسبوك"),
+        "forgot_password":
+            MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
+        "google": MessageLookupByLibrary.simpleMessage("جوجل"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "login_with": MessageLookupByLibrary.simpleMessage("التسجيل بـ"),
         "new_home_new_furniture":
             MessageLookupByLibrary.simpleMessage("منزل جديد!! أثاث جديد!!"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
+        "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "password_is_required":
+            MessageLookupByLibrary.simpleMessage("يجب إدخال كلمة مرور"),
+        "please_enter_valid_email": MessageLookupByLibrary.simpleMessage(
+            "من فضلك أدخل بريد إلكتروني صحيح"),
         "we_make_furniture_with_your_eyes":
             MessageLookupByLibrary.simpleMessage("نصنع الأثاث بعيونك أنت!!")
       };

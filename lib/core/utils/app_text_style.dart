@@ -16,7 +16,7 @@ TextStyle boldStyle(
     _textStyle(color: color, fontSize: fontSize, fontWeight: FontWeight.bold);
 
 TextStyle mediumStyle(
-    {Color color = AppColors.blue,
+    {Color color = AppColors.darkBlue,
       double fontSize = 14}) =>
     _textStyle(color: color, fontSize: fontSize, fontWeight: FontWeight.w500);
 

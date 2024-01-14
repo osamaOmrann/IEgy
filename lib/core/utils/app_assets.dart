@@ -9,4 +9,6 @@ class AppAssets{
   static const String register = '${basePath}register.png';
   static const String splash1 = '${basePath}splash1.png';
   static const String splash2 = '${basePath}splash2.png';
+  static const String google = '${basePath}google.png';
+  static const String facebook = '${basePath}facebook.png';
 }

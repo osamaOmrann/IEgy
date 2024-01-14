@@ -8,7 +8,7 @@ ThemeData getAppTheme() {
       primaryColor: AppColors.primary,
       scaffoldBackgroundColor: AppColors.primary,
       appBarTheme: const AppBarTheme(
-          backgroundColor: AppColors.blue // *** As default value need to be changed ***
+          backgroundColor: AppColors.darkBlue // *** As default value need to be changed ***
       ),
       textTheme: TextTheme(
           displayLarge: boldStyle(color: AppColors.brown),
@@ -19,7 +19,7 @@ ThemeData getAppTheme() {
           style: ElevatedButton.styleFrom(
               backgroundColor: AppColors.brown,
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8)
+                  borderRadius: BorderRadius.circular(59)
               )
           )
       ),

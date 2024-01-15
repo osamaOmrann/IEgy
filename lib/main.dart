@@ -9,14 +9,22 @@ import 'package:iegy/core/routes/app_routes.dart';
 import 'package:iegy/core/services/service_locator.dart';
 import 'package:iegy/core/theme/app_theme.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:iegy/features/auth/presentation/cubit/login_cubit/login_cubit.dart';
 
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
   initServiceLocator();
   await sl<CacheHelper>().init();
-  runApp(BlocProvider(
-      create: (context) => sl<GlobalCubit>()..getCachedLang(),
-      child: const MyApp()));
+  runApp(MultiBlocProvider(
+  providers: [
+    BlocProvider(
+      create: (context) => sl<GlobalCubit>()..getCachedLang()),
+    BlocProvider(
+      create: (context) => sl<LoginCubit>(),
+    ),
+  ],
+  child: const MyApp(),
+));
 }
 
 class MyApp extends StatelessWidget {
@@ -27,28 +35,27 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: const Size(430, 932),
-      builder: (context, child) =>
-          BlocBuilder<GlobalCubit, GlobalState>(
-            builder: (context, state) {
-              return MaterialApp(
-                initialRoute: Routes.initialRoute,
-                onGenerateRoute: AppRoutes.generateRoute,
-                title: 'IEgy',
-                theme: getAppTheme(),
-                localizationsDelegates: [
-                  AppLocalizations.delegate,
-                  GlobalMaterialLocalizations.delegate,
-                  GlobalWidgetsLocalizations.delegate,
-                  GlobalCupertinoLocalizations.delegate,
-                ],
-                supportedLocales: [
-                  Locale('ar'), // العربية
-                  Locale('en') // Spanish
-                ],
-                locale: Locale(BlocProvider.of<GlobalCubit>(context).langCode),
-              );
-            },
-          ),
+      builder: (context, child) => BlocBuilder<GlobalCubit, GlobalState>(
+        builder: (context, state) {
+          return MaterialApp(
+            initialRoute: Routes.initialRoute,
+            onGenerateRoute: AppRoutes.generateRoute,
+            title: 'IEgy',
+            theme: getAppTheme(),
+            localizationsDelegates: [
+              AppLocalizations.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales: [
+              Locale('ar'), // العربية
+              Locale('en') // Spanish
+            ],
+            locale: Locale(BlocProvider.of<GlobalCubit>(context).langCode),
+          );
+        },
+      ),
     );
   }
 }

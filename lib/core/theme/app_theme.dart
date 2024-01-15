@@ -34,6 +34,14 @@ ThemeData getAppTheme() {
               borderSide: BorderSide.none,
               borderRadius: BorderRadius.circular(59),
             ),
+          errorBorder: OutlineInputBorder(
+            borderSide: BorderSide.none,
+            borderRadius: BorderRadius.circular(59),
+          ),
+          border: OutlineInputBorder(
+            borderSide: BorderSide.none,
+            borderRadius: BorderRadius.circular(59),
+          ),
           hintStyle: regularStyle(color: AppColors.grey, fontSize: 14.w),
           contentPadding: const EdgeInsets.symmetric(vertical: 0)
       ),

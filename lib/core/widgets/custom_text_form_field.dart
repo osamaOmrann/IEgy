@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iegy/core/utils/app_colors.dart';
 
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField(
@@ -27,9 +28,10 @@ class CustomTextFormField extends StatelessWidget {
       decoration: InputDecoration(
           hintText: hint,
           labelText: label,
-          prefixIcon: Icon(preIcon),
-          suffixIcon:
-              IconButton(onPressed: onSuffixPressed, icon: Icon(suffixIcon))),
+          prefixIcon: Icon(preIcon, color: AppColors.darkBlue),
+          suffixIcon: IconButton(
+              onPressed: onSuffixPressed,
+              icon: Icon(suffixIcon, color: AppColors.darkBlue))),
     );
   }
 }

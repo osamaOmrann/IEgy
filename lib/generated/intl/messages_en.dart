@@ -44,8 +44,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Password is required"),
         "please_enter_valid_email":
             MessageLookupByLibrary.simpleMessage("Please enter valid email"),
-        "we_make_furniture_with_your_eyes":
+        "we_create_furniture_with_your_eyes":
             MessageLookupByLibrary.simpleMessage(
-                "We make furniture with your eyes!!")
+                "We create furniture with your eyes!!")
       };
 }

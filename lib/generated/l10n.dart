@@ -50,11 +50,11 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `We make furniture with your eyes!!`
-  String get we_make_furniture_with_your_eyes {
+  /// `We create furniture with your eyes!!`
+  String get we_create_furniture_with_your_eyes {
     return Intl.message(
-      'We make furniture with your eyes!!',
-      name: 'we_make_furniture_with_your_eyes',
+      'We create furniture with your eyes!!',
+      name: 'we_create_furniture_with_your_eyes',
       desc: '',
       args: [],
     );

@@ -44,7 +44,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("يجب إدخال كلمة مرور"),
         "please_enter_valid_email": MessageLookupByLibrary.simpleMessage(
             "من فضلك أدخل بريد إلكتروني صحيح"),
-        "we_make_furniture_with_your_eyes":
+        "we_create_furniture_with_your_eyes":
             MessageLookupByLibrary.simpleMessage("نصنع الأثاث بعيونك أنت!!")
       };
 }

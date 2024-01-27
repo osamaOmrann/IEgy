@@ -58,7 +58,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               padding: EdgeInsets.symmetric(horizontal: 22.w),
               child: Text(
                 isFirstPage
-                    ? AppLocalizations.of(context)!.we_make_furniture_with_your_eyes
+                    ? AppLocalizations.of(context)!.we_create_furniture_with_your_eyes
                     : '${AppLocalizations.of(context)!.new_home_new_furniture}\n ${AppLocalizations.of(context)!.discover_our_distinctive_collection_of_furniture_and_renew_your_home_with_a_magical_touch}',
                 style: Theme.of(context).textTheme.displayLarge,
                 textAlign: TextAlign.center,

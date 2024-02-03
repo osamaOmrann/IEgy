@@ -9,7 +9,8 @@ ThemeData getAppTheme() {
       primaryColor: AppColors.primary,
       scaffoldBackgroundColor: AppColors.primary,
       appBarTheme: const AppBarTheme(
-          backgroundColor: AppColors.darkBlue // *** As default value need to be changed ***
+          backgroundColor: Colors.transparent,
+        centerTitle: true
       ),
       textTheme: TextTheme(
           displayLarge: boldStyle(color: AppColors.brown),

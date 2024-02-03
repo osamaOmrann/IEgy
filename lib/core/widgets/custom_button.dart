@@ -7,8 +7,9 @@ class CustomButton extends StatelessWidget {
       {super.key,
       required this.onPressed,
       this.background,
-      required this.text, this.withIcon = false, this.icon, this.textColor, this.w = 320, this.h = 52});
+      required this.text, this.withIcon = false, this.icon, this.textColor, this.w = 320, this.h = 52, this.fontSize});
   final double? h, w;
+  final double? fontSize;
   final VoidCallback onPressed;
   final Color? background, textColor;
   final String text;
@@ -33,7 +34,7 @@ class CustomButton extends StatelessWidget {
                   style: Theme.of(context)
                       .textTheme
                       .displayLarge!
-                      .copyWith(color: textColor ?? AppColors.white, fontSize: 16.w),
+                      .copyWith(color: textColor ?? AppColors.white, fontSize: fontSize ?? 16.w),
                 ),
                 if(withIcon == true) icon ?? const Icon(Icons.error),
               ],

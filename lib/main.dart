@@ -10,7 +10,8 @@ import 'package:iegy/core/services/service_locator.dart';
 import 'package:iegy/core/theme/app_theme.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:iegy/features/auth/presentation/cubit/login_cubit/login_cubit.dart';
-import 'package:iegy/features/nav_bar/presentation/nav_bar_cubit/nav_bar_cubit.dart';
+import 'package:iegy/features/home/presentation/cubit/home_cubit.dart';
+import 'package:iegy/features/nav_bar/presentation/cubit/nav_bar_cubit.dart';
 import 'package:iegy/features/splash/presentation/cubit/welcome_cubit.dart';
 
 main() async {
@@ -26,7 +27,8 @@ main() async {
       BlocProvider(
         create: (context) => sl<NavBarCubit>(),
       ),
-      BlocProvider(create: (context) => sl<WelcomeCubit>())
+      BlocProvider(create: (context) => sl<WelcomeCubit>()),
+      BlocProvider(create: (context) => sl<HomeCubit>())
     ],
     child: const MyApp(),
   ));

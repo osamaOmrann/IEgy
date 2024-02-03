@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iegy/core/utils/app_assets.dart';
-import 'package:iegy/core/widgets/custom_image.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:iegy/features/nav_bar/presentation/components/nav_bar_icon.dart';
-import 'package:iegy/features/nav_bar/presentation/nav_bar_cubit/nav_bar_cubit.dart';
-import 'package:iegy/features/nav_bar/presentation/nav_bar_cubit/nav_bar_state.dart';
+import 'package:iegy/features/nav_bar/presentation/cubit/nav_bar_cubit.dart';
+import 'package:iegy/features/nav_bar/presentation/cubit/nav_bar_state.dart';
 
 class NavBarScreen extends StatelessWidget {
   const NavBarScreen({super.key});
@@ -15,11 +14,7 @@ class NavBarScreen extends StatelessWidget {
     return BlocBuilder<NavBarCubit, NavBarState>(
       builder: (context, state) {
         return Scaffold(
-          body: /*PageView(
-          physics: NeverScrollableScrollPhysics(),
-          controller: pageController,
-      )*/
-              PageView.builder(
+          body: PageView.builder(
             controller: BlocProvider.of<NavBarCubit>(context).controller,
             itemCount: BlocProvider.of<NavBarCubit>(context).pages.length,
             itemBuilder: (_, index) {
@@ -28,7 +23,6 @@ class NavBarScreen extends StatelessWidget {
             },
             onPageChanged: (int index) {
               BlocProvider.of<NavBarCubit>(context).changeIndex(index);
-              print("Displayed Page: ${index + 1}");
             },
           ),
           bottomNavigationBar: ClipRRect(
@@ -40,6 +34,11 @@ class NavBarScreen extends StatelessWidget {
               currentIndex: BlocProvider.of<NavBarCubit>(context).currentIndex,
               onTap: (index) {
                 BlocProvider.of<NavBarCubit>(context).changeIndex(index);
+                BlocProvider.of<NavBarCubit>(context).controller.animateToPage(
+                  index,
+                  duration: Duration(milliseconds: 300),
+                  curve: Curves.easeInOut,
+                );
               },
               items: [
                 BottomNavigationBarItem(

@@ -20,4 +20,8 @@ class AppAssets{
   static const String profile = '${basePath}profile.png';
   static const String profileOutline = '${basePath}profile_outline.png';
   static const String tabIndicator = '${basePath}tab_indicator.png';
+  static const String homeLogo = '${basePath}home_logo.png';
+  static const String notifications = '${basePath}notifications.png';
+  static const String replace = '${basePath}replace.png';
+  static const String home1st = '${basePath}home_1st.png';
 }

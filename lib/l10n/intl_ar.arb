@@ -13,5 +13,9 @@
   "create_new_acc": "إنشاء حساب جديد",
   "password_is_required": "يجب إدخال كلمة مرور",
   "please_enter_valid_email": "من فضلك أدخل بريد إلكتروني صحيح",
-  "email_is_required": "يجب إدخال بريد إلكتروني"
+  "email_is_required": "يجب إدخال بريد إلكتروني",
+  "home": "الرئيسية",
+  "categories": "الفئات",
+  "cart": "عربة التسوق",
+  "profile": "حسابي"
 }

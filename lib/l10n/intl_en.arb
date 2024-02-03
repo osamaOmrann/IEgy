@@ -13,5 +13,9 @@
   "create_new_acc": "Create new account",
   "password_is_required": "Password is required",
   "please_enter_valid_email": "Please enter valid email",
-  "email_is_required": "Email is required"
+  "email_is_required": "Email is required",
+  "home": "Home",
+  "categories": "Categories",
+  "cart": "Cart",
+  "profile": "Profile"
 }

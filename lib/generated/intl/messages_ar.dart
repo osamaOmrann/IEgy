@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
         "categories": MessageLookupByLibrary.simpleMessage("الفئات"),
+        "contact_us": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
         "create_new_acc":
             MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
         "discover_our_distinctive_collection_of_furniture_and_renew_your_home_with_a_magical_touch":
@@ -36,8 +37,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
         "google": MessageLookupByLibrary.simpleMessage("جوجل"),
+        "here_we_make_u_fall_in_love_with_the_place_u_live_in":
+            MessageLookupByLibrary.simpleMessage(
+                "هنا نجعلك تقع في حب المكان الذي تعيش فيه"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "login_failed":
+            MessageLookupByLibrary.simpleMessage("فشل تسجيل الدخول"),
+        "login_successfully":
+            MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
         "login_with": MessageLookupByLibrary.simpleMessage("التسجيل بـ"),
         "new_home_new_furniture":
             MessageLookupByLibrary.simpleMessage("منزل جديد!! أثاث جديد!!"),
@@ -49,6 +57,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "من فضلك أدخل بريد إلكتروني صحيح"),
         "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
         "we_create_furniture_with_your_eyes":
-            MessageLookupByLibrary.simpleMessage("نصنع الأثاث بعيونك أنت!!")
+            MessageLookupByLibrary.simpleMessage("نصنع الأثاث بعيونك أنت!!"),
+        "what_are_u_looking_for":
+            MessageLookupByLibrary.simpleMessage("عن ماذا تبحث؟")
       };
 }

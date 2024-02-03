@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -26,7 +25,15 @@ class LoginScreen extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 55.w),
             child: SingleChildScrollView(
               child: BlocConsumer<LoginCubit, LoginState>(
-                listener: (context, state) {},
+                listener: (context, state) {
+                  if(state is LoginSuccessState) {
+                    showToast(message: AppLocalizations.of(context)!.login_successfully, state: ToastStates.success);
+                    navigateLast(context: context, route: Routes.navBar);
+                  }
+                  if(state is LoginErrorState) {
+                    showToast(message: state.message, state: ToastStates.error);
+                  }
+                },
                 builder: (context, state) {
                   return Form(
                     key: BlocProvider.of<LoginCubit>(context).loginKey,
@@ -44,6 +51,7 @@ class LoginScreen extends StatelessWidget {
                           height: 24.h,
                         ),
                         CustomTextFormField(
+                          keyboardType: TextInputType.emailAddress,
                           controller: BlocProvider.of<LoginCubit>(context).emailController,
                           hint: AppLocalizations.of(context)!.email,
                           preIcon: Icons.mail,
@@ -81,12 +89,7 @@ class LoginScreen extends StatelessWidget {
                           height: 16.h,
                         ),
                         state is LoginLoadingState? const CustomLoadingIndicator(): CustomButton(
-                            onPressed: () {
-                              if(BlocProvider.of<LoginCubit>(context).loginKey.currentState!.validate()) {
-                                log('login');
-                                navigateLast(context: context, route: Routes.navBar);
-                              }
-                            },
+                            onPressed: () => BlocProvider.of<LoginCubit>(context).onLoginPressed(context),
                             text: AppLocalizations.of(context)!.login),
                         SizedBox(
                           height: 4.h,

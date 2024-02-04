@@ -6,7 +6,9 @@ class CartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(backgroundColor: Colors.purple,)
+      appBar: AppBar(
+        title: Text('Cart Screen'),
+      ),
     );
   }
 }

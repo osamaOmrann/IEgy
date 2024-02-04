@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,6 +7,7 @@ import 'package:iegy/core/utils/app_colors.dart';
 import 'package:iegy/core/utils/common_methods.dart';
 import 'package:iegy/core/widgets/custom_button.dart';
 import 'package:iegy/core/widgets/custom_image.dart';
+import 'package:iegy/core/widgets/custom_loading_indicator.dart';
 import 'package:iegy/core/widgets/custom_text_form_field.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:iegy/features/auth/presentation/cubit/login_cubit/login_cubit.dart';
@@ -26,7 +25,15 @@ class LoginScreen extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 55.w),
             child: SingleChildScrollView(
               child: BlocConsumer<LoginCubit, LoginState>(
-                listener: (context, state) {},
+                listener: (context, state) {
+                  if(state is LoginSuccessState) {
+                    showToast(message: AppLocalizations.of(context)!.login_successfully, state: ToastStates.success);
+                    navigateLast(context: context, route: Routes.navBar);
+                  }
+                  if(state is LoginErrorState) {
+                    showToast(message: state.message, state: ToastStates.error);
+                  }
+                },
                 builder: (context, state) {
                   return Form(
                     key: BlocProvider.of<LoginCubit>(context).loginKey,
@@ -44,6 +51,7 @@ class LoginScreen extends StatelessWidget {
                           height: 24.h,
                         ),
                         CustomTextFormField(
+                          keyboardType: TextInputType.emailAddress,
                           controller: BlocProvider.of<LoginCubit>(context).emailController,
                           hint: AppLocalizations.of(context)!.email,
                           preIcon: Icons.mail,
@@ -80,12 +88,8 @@ class LoginScreen extends StatelessWidget {
                         SizedBox(
                           height: 16.h,
                         ),
-                        CustomButton(
-                            onPressed: () {
-                              if(BlocProvider.of<LoginCubit>(context).loginKey.currentState!.validate()) {
-                                log('login');
-                              }
-                            },
+                        state is LoginLoadingState? const CustomLoadingIndicator(): CustomButton(
+                            onPressed: () => BlocProvider.of<LoginCubit>(context).onLoginPressed(context),
                             text: AppLocalizations.of(context)!.login),
                         SizedBox(
                           height: 4.h,

@@ -202,6 +202,96 @@ class S {
       args: [],
     );
   }
+
+  /// `Home`
+  String get home {
+    return Intl.message(
+      'Home',
+      name: 'home',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Categories`
+  String get categories {
+    return Intl.message(
+      'Categories',
+      name: 'categories',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cart`
+  String get cart {
+    return Intl.message(
+      'Cart',
+      name: 'cart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile`
+  String get profile {
+    return Intl.message(
+      'Profile',
+      name: 'profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login Successfully`
+  String get login_successfully {
+    return Intl.message(
+      'Login Successfully',
+      name: 'login_successfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login Failed`
+  String get login_failed {
+    return Intl.message(
+      'Login Failed',
+      name: 'login_failed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What are you looking for?`
+  String get what_are_u_looking_for {
+    return Intl.message(
+      'What are you looking for?',
+      name: 'what_are_u_looking_for',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Here we make you fall in love with the place you live in`
+  String get here_we_make_u_fall_in_love_with_the_place_u_live_in {
+    return Intl.message(
+      'Here we make you fall in love with the place you live in',
+      name: 'here_we_make_u_fall_in_love_with_the_place_u_live_in',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contact us`
+  String get contact_us {
+    return Intl.message(
+      'Contact us',
+      name: 'contact_us',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

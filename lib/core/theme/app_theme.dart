@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:iegy/core/utils/app_colors.dart';
 import 'package:iegy/core/utils/app_text_style.dart';
 
@@ -8,7 +9,8 @@ ThemeData getAppTheme() {
       primaryColor: AppColors.primary,
       scaffoldBackgroundColor: AppColors.primary,
       appBarTheme: const AppBarTheme(
-          backgroundColor: AppColors.darkBlue // *** As default value need to be changed ***
+          backgroundColor: Colors.transparent,
+        centerTitle: true
       ),
       textTheme: TextTheme(
           displayLarge: boldStyle(color: AppColors.brown),
@@ -52,6 +54,16 @@ ThemeData getAppTheme() {
                   boldStyle(color: AppColors.grey, fontSize: 16)
               )
           )
-      )
+      ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      selectedIconTheme: IconThemeData(color: AppColors.brown),
+      selectedLabelStyle: GoogleFonts.montserrat(fontWeight: FontWeight.normal, fontSize: 14.w, color: AppColors.brown),
+      selectedItemColor: AppColors.brown,
+      showSelectedLabels: true,
+      showUnselectedLabels: true,
+      unselectedIconTheme: IconThemeData(color: AppColors.grey),
+      unselectedItemColor: AppColors.grey,
+      unselectedLabelStyle: GoogleFonts.montserrat(fontWeight: FontWeight.normal, fontSize: 14.w, color: AppColors.grey),
+    )
   );
 }

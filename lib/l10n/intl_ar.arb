@@ -13,5 +13,14 @@
   "create_new_acc": "إنشاء حساب جديد",
   "password_is_required": "يجب إدخال كلمة مرور",
   "please_enter_valid_email": "من فضلك أدخل بريد إلكتروني صحيح",
-  "email_is_required": "يجب إدخال بريد إلكتروني"
+  "email_is_required": "يجب إدخال بريد إلكتروني",
+  "home": "الرئيسية",
+  "categories": "الفئات",
+  "cart": "عربة التسوق",
+  "profile": "حسابي",
+  "login_successfully": "تم تسجيل الدخول بنجاح",
+  "login_failed": "فشل تسجيل الدخول",
+  "what_are_u_looking_for": "عن ماذا تبحث؟",
+  "here_we_make_u_fall_in_love_with_the_place_u_live_in": "هنا نجعلك تقع في حب المكان الذي تعيش فيه",
+  "contact_us": "تواصل معنا"
 }

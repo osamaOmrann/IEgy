@@ -22,6 +22,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "cart": MessageLookupByLibrary.simpleMessage("Cart"),
+        "categories": MessageLookupByLibrary.simpleMessage("Categories"),
+        "contact_us": MessageLookupByLibrary.simpleMessage("Contact us"),
         "create_new_acc":
             MessageLookupByLibrary.simpleMessage("Create new account"),
         "discover_our_distinctive_collection_of_furniture_and_renew_your_home_with_a_magical_touch":
@@ -34,7 +37,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
         "google": MessageLookupByLibrary.simpleMessage("Google"),
+        "here_we_make_u_fall_in_love_with_the_place_u_live_in":
+            MessageLookupByLibrary.simpleMessage(
+                "Here we make you fall in love with the place you live in"),
+        "home": MessageLookupByLibrary.simpleMessage("Home"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "login_failed": MessageLookupByLibrary.simpleMessage("Login Failed"),
+        "login_successfully":
+            MessageLookupByLibrary.simpleMessage("Login Successfully"),
         "login_with": MessageLookupByLibrary.simpleMessage("Login with"),
         "new_home_new_furniture":
             MessageLookupByLibrary.simpleMessage("New home!! New furniture!!"),
@@ -44,8 +54,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Password is required"),
         "please_enter_valid_email":
             MessageLookupByLibrary.simpleMessage("Please enter valid email"),
+        "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "we_create_furniture_with_your_eyes":
             MessageLookupByLibrary.simpleMessage(
-                "We create furniture with your eyes!!")
+                "We create furniture with your eyes!!"),
+        "what_are_u_looking_for":
+            MessageLookupByLibrary.simpleMessage("What are you looking for?")
       };
 }

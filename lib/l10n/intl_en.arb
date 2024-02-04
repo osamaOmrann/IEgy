@@ -13,5 +13,14 @@
   "create_new_acc": "Create new account",
   "password_is_required": "Password is required",
   "please_enter_valid_email": "Please enter valid email",
-  "email_is_required": "Email is required"
+  "email_is_required": "Email is required",
+  "home": "Home",
+  "categories": "Categories",
+  "cart": "Cart",
+  "profile": "Profile",
+  "login_successfully": "Login Successfully",
+  "login_failed": "Login Failed",
+  "what_are_u_looking_for": "What are you looking for?",
+  "here_we_make_u_fall_in_love_with_the_place_u_live_in": "Here we make you fall in love with the place you live in",
+  "contact_us": "Contact us"
 }

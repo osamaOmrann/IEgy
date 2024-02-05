@@ -24,4 +24,13 @@ class AppAssets{
   static const String notifications = '${basePath}notifications.png';
   static const String replace = '${basePath}replace.png';
   static const String home1st = '${basePath}home_1st.png';
+  static const String bed = '${basePath}bed.png';
+  static const String chair = '${basePath}chair.png';
+  static const String kitchen = '${basePath}kitchen.png';
+  static const String shuffle = '${basePath}shuffle.png';
+  static const String sofa = '${basePath}sofa.png';
+  static const String sofra = '${basePath}sofra.png';
+  static const String table = '${basePath}table.png';
+  static const String tv = '${basePath}tv.png';
+  static const String door = '${basePath}door.png';
 }

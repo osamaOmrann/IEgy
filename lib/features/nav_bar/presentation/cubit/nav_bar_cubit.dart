@@ -13,7 +13,7 @@ class NavBarCubit extends Cubit<NavBarState> {
   final pages = List.generate(
       4,
       (index) => index == 0
-          ? const HomeScreen()
+          ? HomeScreen()
           : index == 1
               ? const CategoriesScreen()
               : index == 2

@@ -12,7 +12,7 @@ class CustomTextFormField extends StatelessWidget {
       this.preIcon,
       this.suffixIcon,
       this.onSuffixPressed,
-      this.keyboardType, this.shadow});
+      this.keyboardType, this.shadow, this.focusNode});
   final TextEditingController? controller;
   final String? hint, label;
   final String? Function(String?)? validator;
@@ -21,6 +21,7 @@ class CustomTextFormField extends StatelessWidget {
   final IconData? preIcon, suffixIcon;
   final VoidCallback? onSuffixPressed;
   final TextInputType? keyboardType;
+  final FocusNode? focusNode;
 
   @override
   Widget build(BuildContext context) {
@@ -37,6 +38,7 @@ class CustomTextFormField extends StatelessWidget {
         ]: null,
       ),
       child: TextFormField(
+        focusNode: focusNode ?? null,
         keyboardType: keyboardType,
         controller: controller,
         validator: validator,

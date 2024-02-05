@@ -49,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "new_home_new_furniture":
             MessageLookupByLibrary.simpleMessage("New home!! New furniture!!"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "offers": MessageLookupByLibrary.simpleMessage("Offers"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "password_is_required":
             MessageLookupByLibrary.simpleMessage("Password is required"),

@@ -56,14 +56,15 @@ ThemeData getAppTheme() {
           )
       ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      selectedIconTheme: IconThemeData(color: AppColors.brown),
-      selectedLabelStyle: GoogleFonts.montserrat(fontWeight: FontWeight.normal, fontSize: 14.w, color: AppColors.brown),
+      selectedIconTheme: const IconThemeData(color: AppColors.brown),
+      selectedLabelStyle: GoogleFonts.ibmPlexSansArabic(fontWeight: FontWeight.normal, fontSize: 14.w, color: AppColors.brown),
       selectedItemColor: AppColors.brown,
       showSelectedLabels: true,
       showUnselectedLabels: true,
-      unselectedIconTheme: IconThemeData(color: AppColors.grey),
+      unselectedIconTheme: const IconThemeData(color: AppColors.grey),
       unselectedItemColor: AppColors.grey,
-      unselectedLabelStyle: GoogleFonts.montserrat(fontWeight: FontWeight.normal, fontSize: 14.w, color: AppColors.grey),
-    )
+      unselectedLabelStyle: GoogleFonts.ibmPlexSansArabic(fontWeight: FontWeight.normal, fontSize: 14.w, color: AppColors.grey),
+      type: BottomNavigationBarType.shifting
+    ),
   );
 }

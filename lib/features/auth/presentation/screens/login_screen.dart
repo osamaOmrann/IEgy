@@ -161,7 +161,9 @@ class LoginScreen extends StatelessWidget {
                             ),
                             CustomButton(
                               w: 151.w,
-                              onPressed: () {},
+                              onPressed: () {
+                                navigateLast(context: context, route: Routes.navBar);
+                              },
                               text: AppLocalizations.of(context)!.facebook,
                               withIcon: true,
                               icon: CustomImage(

@@ -3,6 +3,7 @@ import 'package:iegy/features/auth/presentation/screens/enter_code_screen.dart';
 import 'package:iegy/features/auth/presentation/screens/login_screen.dart';
 import 'package:iegy/features/auth/presentation/screens/reset_password_screen.dart';
 import 'package:iegy/features/auth/presentation/screens/send_code_screen.dart';
+import 'package:iegy/features/home/presentation/screens/search_screen.dart';
 import 'package:iegy/features/nav_bar/presentation/screens/nav_bar_screen.dart';
 import 'package:iegy/features/splash/presentation/screens/splash_screen.dart';
 import 'package:iegy/features/splash/presentation/screens/welcome_screen.dart';
@@ -15,10 +16,7 @@ class Routes {
   static const String resetPassword = '/resetPassword';
   static const String sendCode = '/sendCode';
   static const String navBar = '/navBar';
-  /*static const String home = '/home';
-  static const String categories = '/categories';
-  static const String cart = '/cart';
-  static const String profile = '/profile';*/
+  static const String searchScreen = '/searchScreen';
 }
 
 class AppRoutes {
@@ -38,6 +36,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const SendCodeScreen());
       case Routes.navBar:
         return MaterialPageRoute(builder: (_) => const NavBarScreen());
+      case Routes.searchScreen:
+        return MaterialPageRoute(builder: (_) => const SearchScreen());
       default:
         return MaterialPageRoute(builder: (_) => const Scaffold(
           body: Center(

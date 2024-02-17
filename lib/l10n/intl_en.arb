@@ -22,5 +22,15 @@
   "login_failed": "Login Failed",
   "what_are_u_looking_for": "What are you looking for?",
   "here_we_make_u_fall_in_love_with_the_place_u_live_in": "Here we make you fall in love with the place you live in",
-  "contact_us": "Contact us"
+  "contact_us": "Contact us",
+  "already_you_have_an_account": "Already you have an account?",
+  "confirm_password": "Confirm password?",
+  "full_name": "Full Name",
+  "create_acc": "Create account",
+  "please_enter_valid_phone_number": "Please enter valid phone number",
+  "phone_number_is_required": "Phone Number is required",
+  "phone_number": "Phone number",
+  "check_your_email": "Check your email",
+  "we_have_sent_you_a_four_digit_code": "We have sent you a four-digit code",
+  "send_the_code_again": "Send the code again"
 }

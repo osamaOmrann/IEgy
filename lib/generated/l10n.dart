@@ -1,7 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-
 import 'intl/messages_all.dart';
 
 // **************************************************************************
@@ -288,6 +287,106 @@ class S {
     return Intl.message(
       'Contact us',
       name: 'contact_us',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already you have an account?`
+  String get already_you_have_an_account {
+    return Intl.message(
+      'Already you have an account?',
+      name: 'already_you_have_an_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm password?`
+  String get confirm_password {
+    return Intl.message(
+      'Confirm password?',
+      name: 'confirm_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Full Name`
+  String get full_name {
+    return Intl.message(
+      'Full Name',
+      name: 'full_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create account`
+  String get create_acc {
+    return Intl.message(
+      'Create account',
+      name: 'create_acc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter valid phone number`
+  String get please_enter_valid_phone_number {
+    return Intl.message(
+      'Please enter valid phone number',
+      name: 'please_enter_valid_phone_number',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone Number is required`
+  String get phone_number_is_required {
+    return Intl.message(
+      'Phone Number is required',
+      name: 'phone_number_is_required',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone number`
+  String get phone_number {
+    return Intl.message(
+      'Phone number',
+      name: 'phone_number',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Check your email`
+  String get check_your_email {
+    return Intl.message(
+      'Check your email',
+      name: 'check_your_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We have sent you a four-digit code`
+  String get we_have_sent_you_a_four_digit_code {
+    return Intl.message(
+      'We have sent you a four-digit code',
+      name: 'we_have_sent_you_a_four_digit_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send the code again`
+  String get send_the_code_again {
+    return Intl.message(
+      'Send the code again',
+      name: 'send_the_code_again',
       desc: '',
       args: [],
     );

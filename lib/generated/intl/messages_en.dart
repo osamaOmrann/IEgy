@@ -22,9 +22,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "already_you_have_an_account": MessageLookupByLibrary.simpleMessage(
+            "Already you have an account?"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
         "categories": MessageLookupByLibrary.simpleMessage("Categories"),
+        "check_your_email":
+            MessageLookupByLibrary.simpleMessage("Check your email"),
+        "confirm_password":
+            MessageLookupByLibrary.simpleMessage("Confirm password?"),
         "contact_us": MessageLookupByLibrary.simpleMessage("Contact us"),
+        "create_acc": MessageLookupByLibrary.simpleMessage("Create account"),
         "create_new_acc":
             MessageLookupByLibrary.simpleMessage("Create new account"),
         "discover_our_distinctive_collection_of_furniture_and_renew_your_home_with_a_magical_touch":
@@ -36,6 +43,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
+        "full_name": MessageLookupByLibrary.simpleMessage("Full Name"),
         "google": MessageLookupByLibrary.simpleMessage("Google"),
         "here_we_make_u_fall_in_love_with_the_place_u_live_in":
             MessageLookupByLibrary.simpleMessage(
@@ -52,12 +60,22 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "password_is_required":
             MessageLookupByLibrary.simpleMessage("Password is required"),
+        "phone_number": MessageLookupByLibrary.simpleMessage("Phone number"),
+        "phone_number_is_required":
+            MessageLookupByLibrary.simpleMessage("Phone Number is required"),
         "please_enter_valid_email":
             MessageLookupByLibrary.simpleMessage("Please enter valid email"),
+        "please_enter_valid_phone_number": MessageLookupByLibrary.simpleMessage(
+            "Please enter valid phone number"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "send_the_code_again":
+            MessageLookupByLibrary.simpleMessage("Send the code again"),
         "we_create_furniture_with_your_eyes":
             MessageLookupByLibrary.simpleMessage(
                 "We create furniture with your eyes!!"),
+        "we_have_sent_you_a_four_digit_code":
+            MessageLookupByLibrary.simpleMessage(
+                "We have sent you a four-digit code"),
         "what_are_u_looking_for":
             MessageLookupByLibrary.simpleMessage("What are you looking for?")
       };

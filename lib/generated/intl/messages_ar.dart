@@ -22,9 +22,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "already_you_have_an_account":
+            MessageLookupByLibrary.simpleMessage("هل لديك حساب بالفعل؟"),
         "cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
         "categories": MessageLookupByLibrary.simpleMessage("الفئات"),
+        "check_your_email": MessageLookupByLibrary.simpleMessage(
+            "افحص البريد الالكتروني الخاص بك"),
+        "confirm_password":
+            MessageLookupByLibrary.simpleMessage("اعادة كلمة المرور"),
         "contact_us": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
+        "create_acc": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
         "create_new_acc":
             MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
         "discover_our_distinctive_collection_of_furniture_and_renew_your_home_with_a_magical_touch":
@@ -36,6 +43,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "facebook": MessageLookupByLibrary.simpleMessage("فيسبوك"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
+        "full_name": MessageLookupByLibrary.simpleMessage("الاسم بالكامل"),
         "google": MessageLookupByLibrary.simpleMessage("جوجل"),
         "here_we_make_u_fall_in_love_with_the_place_u_live_in":
             MessageLookupByLibrary.simpleMessage(
@@ -53,11 +61,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "password_is_required":
             MessageLookupByLibrary.simpleMessage("يجب إدخال كلمة مرور"),
+        "phone_number": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "phone_number_is_required":
+            MessageLookupByLibrary.simpleMessage("يجب ادخال رقم الهاتف"),
         "please_enter_valid_email": MessageLookupByLibrary.simpleMessage(
             "من فضلك أدخل بريد إلكتروني صحيح"),
+        "please_enter_valid_phone_number":
+            MessageLookupByLibrary.simpleMessage("من فضلك ادخل رقم هاتف صحيح"),
         "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
+        "send_the_code_again":
+            MessageLookupByLibrary.simpleMessage("ارسال الكود مرة اخري؟"),
         "we_create_furniture_with_your_eyes":
             MessageLookupByLibrary.simpleMessage("نصنع الأثاث بعيونك أنت!!"),
+        "we_have_sent_you_a_four_digit_code":
+            MessageLookupByLibrary.simpleMessage(
+                "لقد ارسلنا اليك كود مكون من 4 ارقام"),
         "what_are_u_looking_for":
             MessageLookupByLibrary.simpleMessage("عن ماذا تبحث؟")
       };
